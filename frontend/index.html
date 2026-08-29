@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uptime Checker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Uptime Checker</h1>
+
+    <!-- Add URL Form -->
+    <div class="add-form">
+      <input type="text" id="urlInput" placeholder="Enter URL to monitor (https://...)" />
+      <select id="intervalSelect">
+        <option value="1">Every 1 minute</option>
+        <option value="5">Every 5 minutes</option>
+        <option value="10">Every 10 minutes</option>
+        <option value="15">Every 15 minutes</option>
+        <option value="30">Every 30 minutes</option>
+        <option value="60">Every 60 minutes</option>
+      </select>
+      <button id="addButton">Add URL</button>
+    </div>
+
+    <!-- URL List -->
+    <div class="url-list" id="urlList">
+      <p>No URLs being monitored yet.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
