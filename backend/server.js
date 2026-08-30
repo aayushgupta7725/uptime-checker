@@ -2,13 +2,14 @@ const express = require('express');
 const cors = require('cors');
 const db = require('./database')
 const { startChecker } = require('./checker');
+const path = require('path');
 
 const app = express();
-app.use(cors());
 const PORT = 3000;
 
+app.use(cors());
 app.use(express.json());
-app.use(express.static('../frontend'));
+app.use(express.static(path.join(__dirname, '../frontend')));
 
 app.post('/urls', (req, res) => {
   const { url, interval} = req.body;

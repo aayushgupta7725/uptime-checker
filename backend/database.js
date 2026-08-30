@@ -1,5 +1,7 @@
+const path = require('path');
 const Database = require('better-sqlite3');
-const db = new Database('uptime.db');
+
+const db = new Database(path.join(__dirname, '../data/uptime.db'));
 
 db.exec(`
   CREATE TABLE IF NOT EXISTS urls (

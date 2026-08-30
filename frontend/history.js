@@ -29,7 +29,7 @@ async function loadHistory() {
       <tbody>
         ${checks.map(check => `
           <tr>
-            <td>${check.checked_at}</td>
+            <td>${new Date(check.checked_at + ' UTC').toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}</td>
             <td><span class="status ${check.status}">${check.status.toUpperCase()}</span></td>
             <td>${check.response_time ? check.response_time + 'ms' : 'N/A'}</td>
           </tr>
