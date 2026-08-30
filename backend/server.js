@@ -8,6 +8,7 @@ app.use(cors());
 const PORT = 3000;
 
 app.use(express.json());
+app.use(express.static('../frontend'));
 
 app.post('/urls', (req, res) => {
   const { url, interval} = req.body;

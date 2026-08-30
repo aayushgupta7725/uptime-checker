@@ -1,4 +1,4 @@
-const API = 'http://localhost:3000';
+const API = '';
 
 async function loadUrls() {
   const response = await fetch(`${API}/urls`);
